@@ -1,93 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body class="text-white" style="background-color: #0d72c9;">
+    <title>Frontend Mentor | QR code component</title>
 
-<div class="flex flex-col justify-center items-center">
-  <h1 class="text-2xl block font-bold mx-auto">QR Generator</h1>
-  <h3 class="block  mx-auto ">customise and generate your qr code</h3>
-</div>
-<div class="flex justify-between items-center mx-12  ">
-  <div class="bg-white px-8 py-4 text-black shadow-md rounded-2xl w-3/6">
-    <h4 class="uppercase font-bold underline py-4">your QR code settings</h4>
-    <form action="submit">
-      <div class="my-2 outline-none w-full">
-        <label class="mb-2 block capitalize" for="text/url"> enter your text/url</label>
-        <input style="width:280px" placeholder="example https://www.facebook.com" class="outline-none block border border-gray-400 px-2 py-1 rounded-md font-light" type="text" name="text/url" id="text/url" class="qrtexts">
-      </div>
-      <hr class="text-gray-400"/>
-      <div class="my-2 outline-none w-full flex justify-between">
-        <div>
-        <label class="mb-2 block capitalize" for="qr-width"> enter your qr width</label>
-        <input type="number" name="width" id="qr-width" value="255" min="0" class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light">
-      </div>
-      <div>
-        <label class="mb-2 block capitalize" for="qr-height"> enter your qr height</label>
-        <input type="number" name="height" id="qr-height" min="0" value="255" class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light">
-      </div>
-      <div>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="text-white" style="background-color: #0d72c9;">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-2xl block font-bold mx-auto">QR Generator</h1>
+      <h3 class="block mx-auto">customise and generate your qr code</h3>
+    </div>
+    <div class="flex justify-between items-center mx-12">
+      <div class="bg-white px-8 py-4 text-black shadow-md rounded-2xl w-3/6">
+        <h4 class="uppercase font-bold underline py-4">
+          your QR code settings
+        </h4>
+        <form action="submit">
+          <div class="my-2 outline-none w-full">
+            <label class="mb-2 block capitalize" for="text/url">
+              enter your text/url
+            </label>
+            <input
+              style="width: 280px;"
+              placeholder="example https://www.facebook.com"
+              class="outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              type="text"
+              name="text/url"
+              id="text/url"
+              class="qrtexts"
+            />
+          </div>
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <div>
+              <label class="mb-2 block capitalize" for="qr-width">
+                enter your qr width
+              </label>
+              <input
+                type="number"
+                name="width"
+                id="qr-width"
+                value="255"
+                min="0"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-height">
+                enter your qr height
+              </label>
+              <input
+                type="number"
+                name="height"
+                id="qr-height"
+                min="0"
+                value="255"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <div>
+              <label class="mb-2 block capitalize" for="qr-colorDark">
+                enter your qr Color dark
+              </label>
 
-      </div> 
-      </div>
-      <hr class="text-gray-400"/>
-      <div class="my-2 outline-none w-full flex justify-between">
-        <div>
-        <label class="mb-2 block capitalize" for="qr-colorDark"> enter your qr Color dark</label>
-       
-        <input type="color" name="qr-colorDark" id="qr-colorDark" value="#000"  class="w-10 h-10 outline-none block border border-gray-400  rounded-md font-light cursor-pointer">
-      </div>
-      <div>
-        <label class="mb-2 block capitalize" for="qr-colorLight"> enter your qr color light</label>
-        <input type="color" name="qr-colorLight" id="qr-colorLight"  value="#ffffff" class="w-10 h-10 outline-none block border border-gray-400  rounded-md font-light cursor-pointer">
-      </div>
-      <div>
-      </div> 
+              <input
+                type="color"
+                name="qr-colorDark"
+                id="qr-colorDark"
+                value="#000"
+                class="w-10 h-10 outline-none block border border-gray-400 rounded-md font-light cursor-pointer"
+              />
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-colorLight">
+                enter your qr color light
+              </label>
+              <input
+                type="color"
+                name="qr-colorLight"
+                id="qr-colorLight"
+                value="#ffffff"
+                class="w-10 h-10 outline-none block border border-gray-400 rounded-md font-light cursor-pointer"
+              />
+            </div>
+            <div></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <div>
+              <label class="mb-2 block capitalize" for="text/url">
+                enter correctness level
+              </label>
+              <select class="px-2 py-2 rounded-md" value="Q">
+                <option value="Q" name="Q" id="Q">Q</option>
+                <option value="H" name="H" id="H">H</option>
+                <option value="M" name="M" id="M">M</option>
+                <option value="L" name="L" id="L">L</option>
+              </select>
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-dotscale">
+                enter your qr dot scale
+              </label>
+              <input
+                type="number"
+                name="qr-dotscale"
+                id="qr-dotscale"
+                value="1"
+                min="0"
+                max="1"
+                step="0.01"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <div>
+              <label class="mb-2 block capitalize" for="qr-spacecolor">
+                enter spacing color
+              </label>
+              <input
+                type="color"
+                name="qr-spacecolor"
+                id="qr-spacecolor"
+                value="#000"
+                class="w-10 h-10 outline-none block border border-gray-400 rounded-md font-light cursor-pointer"
+              />
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-spacing">
+                spacing value in px
+              </label>
+              <input
+                type="number"
+                name="qr-spacing"
+                id="qr-spacing"
+                value="0"
+                min="0"
+                step="1"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div class=""></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div
+            class="my-2 outline-none w-full flex justify-between items-center"
+          >
+            <label for="qr-logo">Choose a logo for qr:</label>
 
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+              style="width: 305px;"
+            />
+          </div>
+
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <div>
+              <label class="mb-2 block capitalize" for="qr-width">
+                enter your logo width
+              </label>
+              <input
+                type="number"
+                name="width"
+                id="qr-width"
+                value="80"
+                min="0"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-height">
+                enter your logo height
+              </label>
+              <input
+                type="number"
+                name="height"
+                id="qr-height"
+                min="0"
+                value="80"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div class="my-2 outline-none w-full flex justify-between">
+            <label for="qr-background">Choose a background for qr:</label>
+
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+              style="width: 305px;"
+            />
+            <div></div>
+          </div>
+          <hr class="text-gray-400" />
+          <div
+            class="my-2 outline-none w-full flex justify-between items-center"
+          >
+            <div>
+              <label class="mb-5 capitalize" for="qr-transparent">
+                background transparent
+              </label>
+              <input
+                type="checkbox"
+                name="width"
+                id="qr-transparent"
+                class="w-20 outline-none border border-gray-400 mx-2 my-1 rounded-md font-light"
+              />
+            </div>
+
+            <div></div>
+          </div>
+
+          <div
+            class="my-2 outline-none w-full flex justify-between items-center"
+          >
+            <div>
+              <label class="mb-2 block capitalize" for="qr-bgcolor">
+                background color
+              </label>
+              <input
+                type="color"
+                name="qr-bgcolor"
+                id="qr-bgcolor"
+                value="#ffffff"
+                class="w-10 h-10 outline-none block border border-gray-400 rounded-md font-light cursor-pointer"
+              />
+            </div>
+            <div>
+              <label class="mb-2 block capitalize" for="qr-bgtransparency">
+                background transparency alpha
+              </label>
+              <input
+                type="number"
+                name="qr-bgtransparency"
+                id="qr-bgtransparency"
+                value="1"
+                min="0"
+                max="1"
+                step="0.01"
+                class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light"
+              />
+            </div>
+            <div></div>
+          </div>
+        </form>
       </div>
-      <hr class="text-gray-400"/>
-      <div class="my-2 outline-none w-full flex justify-between">
-       <div>
-        <label class="mb-2 block capitalize" for="text/url"> enter correctness level</label>
-        <select class="px-2 py-2 rounded-md" value="Q">
-          <option value="Q" name="Q" id="Q">Q</option>
-          <option value="H" name="H" id="H">H</option>
-          <option value="M" name="M" id="M">M</option>
-          <option value="L" name="L" id="L">L</option>
-        </select>
-       </div>
-       <div>
-        <label class="mb-2 block capitalize" for="qr-dotscale"> enter your qr dot scale</label>
-        <input type="number" name="qr-dotscale" id="qr-dotscale" value="1" min="0" max="1" step="0.01" class="w-20 outline-none block border border-gray-400 px-2 py-1 rounded-md font-light">
-       </div>
 
+      <div></div>
+    </div>
 
-      </div>
-      <hr class="text-gray-400"/>
-    </form>
-  </div>
-
-  <div>
-    
-  </div>
-</div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">seif Amr</a>.
-  </div>
-</body>
-<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by
+      <a href="#">seif Amr</a>
+      .
+    </div>
+  </body>
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
 </html>
